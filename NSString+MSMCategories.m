@@ -17,18 +17,18 @@
 + (NSString *)pluralizedStringForNoun:(NSString *)noun count:(NSInteger)count {
     
     if (count == 1) {
-        return NSLocalizedString($S(@"1 %@", noun), nil);
+        return NSLocalizedString([NSString stringWithFormat:@"1 %@", noun], nil);
     } else if (count == 0) {
-        return NSLocalizedString($S(@"No %@s", noun), nil);
+        return NSLocalizedString([NSString stringWithFormat:@"No %@s", noun], nil);
     } else {
-        return $S(NSLocalizedString($S(@"%%i %@s", noun), nil), count);
+        return [NSString stringWithFormat:NSLocalizedString([NSString stringWithFormat:@"%%i %@s", noun], nil), count];
     }
     
 }
 
 + (NSString *)pluralizedStringWithoutCountForNoun:(NSString *)noun count:(NSInteger)count {
     
-    return count > 1 ? $S(@"%@s", noun) : noun;
+    return count > 1 ? [NSString stringWithFormat:@"%@s", noun] : noun;
     
 }
 
@@ -40,7 +40,7 @@
     }
     
     for (NSString *item in stringArray) {
-        csvStr = [csvStr stringByAppendingString:$S(@"%@,", item)];
+        csvStr = [csvStr stringByAppendingString:[NSString stringWithFormat:@"%@,", item]];
     }
     
     // remove trailing commas
