@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author             = { "Mike Mayo" => "greenisus@gmail.com" }
   s.social_media_url = "http://twitter.com/greenisus"
   s.platform     = :ios
-  s.source       = { :git => "https://github.com/greenisus/msm-categories.git", :branch => "master" }
+  s.source       = { :git => "https://github.com/greenisus/msm-categories.git", :tag => "1.0" }
   s.source_files  = '*.{h,m}'
 
 end

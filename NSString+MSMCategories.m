@@ -19,7 +19,7 @@
     if (count == 1) {
         return NSLocalizedString([NSString stringWithFormat:@"1 %@", noun], nil);
     } else if (count == 0) {
-        return NSLocalizedString(([NSString stringWithFormat:@"No %@s", noun]), nil);
+        return NSLocalizedString([NSString stringWithFormat:@"No %@s", noun], nil);
     } else {
         return [NSString stringWithFormat:NSLocalizedString([NSString stringWithFormat:@"%%i %@s", noun], nil), count];
     }
