@@ -69,4 +69,8 @@
     self.transform = CGAffineTransformMakeScale(scale, scale);
 }
 
++ (void)animate:(void (^)(void))animations {
+    [UIView animateWithDuration:0.25 animations:animations];
+}
+
 @end

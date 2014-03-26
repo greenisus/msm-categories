@@ -25,4 +25,7 @@
 
 - (void)makeCircular;
 
+// animates with a duration of 0.25
++ (void)animate:(void (^)(void))animations NS_AVAILABLE_IOS(4_0);
+
 @end
